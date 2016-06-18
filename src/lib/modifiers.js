@@ -117,6 +117,12 @@ modifierMap = [
     values: filterKeys
   },
   {
+    key: 'o',
+    desc: 'outputformat',
+    type: 'string',
+    values: ['webp', 'png', 'jpeg']
+  },
+  {
     key: 'q',
     desc: 'quality',
     type: 'integer',
@@ -228,6 +234,12 @@ function parseModifiers(mods, modArr) {
         value = string.sanitize(value, 'alpha');
         if (inArray(value.toLowerCase(), mod.values)){
           mods.filter = value.toLowerCase();
+        }
+        mods.hasModStr = true;
+        break;
+      case 'outputformat':
+        if (inArray(value.toLowerCase(), mod.values)){
+          mods.outputFormat = value.toLowerCase();
         }
         mods.hasModStr = true;
         break;

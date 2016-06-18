@@ -41,6 +41,11 @@ function Image(request){
   // pull the various parts needed from the request params
   this.parseUrl(request);
 
+  // let them choose output format as a modifier instead of ext
+  if (this.modifiers.outputFormat) {
+    this.outputFormat = this.modifiers.outputFormat;
+  }
+
   // placeholder for the buffer/stream coming from s3, will hold the image
   this.contents = null;
 

@@ -170,6 +170,7 @@ Modifiers are a dash delimited string of the requested modifications to be made,
 * filter:       eg. fsepia
 * external:     eg. efacebook
 * quality:      eg. q90
+* outputformat: eg. owebp
 
 *Crop modifiers:*
 * fit
@@ -199,6 +200,7 @@ Modifiers are a dash delimited string of the requested modifications to be made,
 * `http://my.cdn.com/h50/path/to/image.png`
 * `http://my.cdn.com/h50-w100/path/to/image.png`
 * `http://my.cdn.com/s50-gne/path/to/image.png`
+* `http://my.cdn.com/s50-owebp/path/to/image.png` - converts to WebP, in case the image you're requesting doesn't have an extension.
 * `http://my.cdn.com/path/to/image.png` - original image request, will be optimized but not resized
 
 
